@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load figures %}
 
 {% block content %}
 
@@ -10,7 +9,7 @@
 <!      <img src="{% static 'lang-logo.png'%}">>
 <!    </a>>
     <a href="/" class="epicycles">
-      <img src="{% figures 'epicycles.jpg'%}">
+      <img src="{% static 'epicycles.jpg'%}">
     </a>
     <h1>Welcome to the Rambam Calculator</h1>
     <p>This is a Python-based calculator that can convert between Hebrew, Gregorian, and Astronomical calendars, and also generate astronomical predictions of the visibility of the new moon.</p>
