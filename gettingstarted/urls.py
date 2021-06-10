@@ -16,7 +16,7 @@ import hello.views
 
 urlpatterns = [
     path("", hello.views.index, name="index"),
-    path("https://protected-badlands-03930.herokuapp.com/page2.html", hello.views.page2, name="page2"),
+    path("page2.html", hello.views.page2, name="page2"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
 ]
