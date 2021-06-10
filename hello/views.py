@@ -11,6 +11,9 @@ def index(request):
 def page2(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "page2.html")
+def page3(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, "page3.html")
 #def index(request):
 #    r = requests.get('http://httpbin.org/status/418')
 #    print(r.text)
