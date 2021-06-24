@@ -19,6 +19,10 @@ def page3(request):
 #    print(r.text)
 #    return HttpResponse('<pre>' + r.text + '</pre>')
 
+@csrf_exempt
+def html4(request):
+    dump = dumpdata('POST', request.POST)
+    return render(request, 'getpost/html4.html', {'data' : dump })
 
 def db(request):
 
