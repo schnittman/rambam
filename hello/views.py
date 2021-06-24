@@ -20,6 +20,15 @@ def page3(request):
 #    print(r.text)
 #    return HttpResponse('<pre>' + r.text + '</pre>')
 
+def dumpdata(place, data) :
+    retval = ""
+    if len(data) > 0 :
+        retval += '<p>Incoming '+place+' data:<br/>\n'
+        for key, value in data.items():
+            retval += html.escape(key) + '=' + html.escape(value) + '</br>\n'
+        retval += '</p>\n'
+    return retval
+
 @csrf_exempt
 def html4(request):
     dump = dumpdata('POST', request.POST)
