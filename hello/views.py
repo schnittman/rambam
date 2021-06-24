@@ -22,7 +22,7 @@ def page3(request):
 @csrf_exempt
 def html4(request):
     dump = dumpdata('POST', request.POST)
-    return render(request, 'getpost/html4.html', {'data' : dump })
+    return render(request, 'html4.html', {'data' : dump })
 
 def db(request):
 
