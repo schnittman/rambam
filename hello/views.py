@@ -57,4 +57,4 @@ def db(request):
 @csrf_exempt
 def dateConvert(request):
     dump = dumpdata('POST', request.POST)
-    return render(request, 'dateCinvert.html', {'data': dump})
+    return render(request, 'dateConvert.html', {'data': dump})
