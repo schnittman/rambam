@@ -43,3 +43,9 @@ def db(request):
     greetings = Greeting.objects.all()
 
     return render(request, "db.html", {"greetings": greetings})
+
+@csrf_exempt
+def dateConvert(request):
+    dump = dumpdata('POST', request.POST)
+    return render(request, 'dateConvert.html', {'data': dump})
+
