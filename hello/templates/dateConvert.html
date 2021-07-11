@@ -1,0 +1,22 @@
+{% extends "base3.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+  <div class="container">
+  </div>
+</div>
+<p>Pre HTML 5 input types...</p>
+<form method="post">
+   <p>Is your imput date from the Hebrew or Gregorian calendar?:<br/>
+    <input type="radio" name="when" value="am">Hebrew<br>
+    <input type="radio" name="when" value="pm" checked>Gregorian</p>
+   <input type="submit" name="dopost" value="Submit"/>
+   </p>
+   
+</form>
+<hr>
+{{ data|safe }}
+
+{% endblock %}
