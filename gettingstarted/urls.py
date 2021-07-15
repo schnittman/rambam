@@ -21,6 +21,7 @@ urlpatterns = [
     path("html4.html", hello.views.html4, name="html4"),
     path("chemda.html", hello.views.chemda, name="chemda"),
     path("dateConvert.html", hello.views.dateConvert, name="dateConvert"),
+    path("add_nums.html", hello.views.add_nums, name="add_nums"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
 ]
