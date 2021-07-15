@@ -42,7 +42,7 @@ def form_trial(place, data):
     if len(data) > 0:
         retval += '<p>Incoming '+place+' data:<br/>\n'
         for key, value in data.items():
-            retval += html.escape(key) + '=' + html.escape(value) + '</br>\n'
+            retval += html.escape(key) + '=' + html.escape(value *2) + '</br>\n'
         retval += '</p>\n'
     return retval
 
@@ -59,7 +59,7 @@ def add_nums(request):
 
 @csrf_exempt
 def chemda(request):
-    dump = dumpdata('POST', request.POST)
+    dump = form_trial('POST', request.POST)
     return render(request, 'chemda.html', {'data': dump})
 
 
