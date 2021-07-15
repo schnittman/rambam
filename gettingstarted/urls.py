@@ -19,6 +19,7 @@ urlpatterns = [
     path("page2.html", hello.views.page2, name="page2"),
     path("page3.html", hello.views.page3, name="page3"),
     path("html4.html", hello.views.html4, name="html4"),
+    path("chemda.html", hello.views.chemda, name="chemda"),
     path("dateConvert.html", hello.views.dateConvert, name="dateConvert"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
