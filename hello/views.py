@@ -37,9 +37,23 @@ def dumpdata(place, data):
         retval += '</p>\n'
     return retval
 
+def form_trial(place, data):
+    retval = ""
+    if len(data) > 0:
+        retval += '<p>Incoming '+place+' data:<br/>\n'
+        for key, value in data.items():
+            retval += html.escape(key) + '=' + html.escape(value) + '</br>\n'
+        retval += '</p>\n'
+    return retval
+
 
 @csrf_exempt
 def html4(request):
+    dump = dumpdata('POST', request.POST)
+    return render(request, 'html4.html', {'data': dump})
+
+@csrf_exempt
+def chemda(request):
     dump = dumpdata('POST', request.POST)
     return render(request, 'html4.html', {'data': dump})
 
