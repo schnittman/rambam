@@ -74,7 +74,7 @@ def db(request):
     return render(request, "db.html", {"greetings": greetings})
 
 def double_number(num):
-    return (num)*2
+    return int(num)*2
 
 @csrf_exempt
 def dateConvert(request):
