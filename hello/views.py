@@ -42,7 +42,7 @@ def form_trial(place, data):
     if len(data) > 0:
         retval += '<p>Incoming '+place+' data:<br/>\n'
         for key, value in data.items():
-            retval += html.escape(key) + '=' + html.escape(value)*2 + '</br>\n'
+            retval += html.escape(key) + '=' + html.escape(int(value)*2) + '</br>\n'
         retval += '</p>\n'
     return retval
 
