@@ -51,6 +51,8 @@ def form_trial(place, data):
 def html4(request):
     dump = dumpdata('POST', request.POST)
     return render(request, 'html4.html', {'data': dump})
+
+@csrf_exempt
 def add_nums(request):
     dump = dumpdata('POST', request.POST)
     return render(request, 'add_nums.html', {'data': dump})
