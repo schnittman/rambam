@@ -55,7 +55,7 @@ def html4(request):
 @csrf_exempt
 def chemda(request):
     dump = dumpdata('POST', request.POST)
-    return render(request, 'html4.html', {'data': dump})
+    return render(request, 'chemda.html', {'data': dump})
 
 
 def db(request):
