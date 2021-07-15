@@ -43,7 +43,7 @@ def form_trial(place, data):
         retval += '<p>Incoming '+place+' data:<br/>\n'
         for key, value in data.items():
             retval += html.escape(key) + '=' + html.escape(value) + '</br>\n'
-            retval += str(double_number(html.escape(value)))
+            retval += str(double_number(int(html.escape(value))))
         retval += '</p>\n'
     return retval
 
@@ -74,7 +74,7 @@ def db(request):
     return render(request, "db.html", {"greetings": greetings})
 
 def double_number(num):
-    return num*2
+    return int(num)*2
 
 @csrf_exempt
 def dateConvert(request):
