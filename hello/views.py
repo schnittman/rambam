@@ -43,8 +43,8 @@ def form_trial(place, data):
         retval += '<p>Incoming '+place+' data:<br/>\n'
         for key, value in data.items():
             if html.escape(key) == 'Day':
-                value *= 2
-            retval += html.escape(key) + '=' + html.escape(int(value)) + '</br>\n'
+                int(value) *= 2
+            retval += key + '=' + str(value) + '</br>\n'
         retval += '</p>\n'
     return retval
 
