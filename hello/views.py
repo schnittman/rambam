@@ -63,8 +63,8 @@ def add_nums(request):
 
 @csrf_exempt
 def chemda(request):
-    val1 = int(request.POST['Month'])
-    val2 = int(request.POST['Day'])
+    val1 = int(request.POST.get('Month', False))
+    val2 = int(request.POST.get('Day', False))
     res = val1 + val2
     return render(request, 'chemda.html', {'data': res})
 
