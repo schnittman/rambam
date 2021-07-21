@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 import html
 from django.views.decorators.csrf import csrf_exempt
-from cal_converter_trial import *
+from hello.cal_converter_trial.py import *
 from .models import Greeting
 
 # Create your views here.
