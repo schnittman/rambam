@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 import html
 from django.views.decorators.csrf import csrf_exempt
-
+from cal_converter_trial import *
 from .models import Greeting
 
 # Create your views here.
@@ -65,7 +65,8 @@ def add_nums(request):
 def chemda(request):
     val1 = int(request.POST.get('Month', False))
     val2 = int(request.POST.get('Day', False))
-    res = val1 + val2
+    val3 = int(request.POST.get('Year', False))
+    res = eng_to_heb(val1, val2, val3)
     return render(request, 'chemda.html', {'data': res})
 
 
