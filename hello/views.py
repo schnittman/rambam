@@ -38,6 +38,7 @@ def dumpdata(place, data):
     return retval
 
 def form_trial(place, data):
+    
     retval = ""
     if len(data) > 0:
         retval += '<p>Incoming '+place+' data:<br/>\n'
@@ -62,8 +63,10 @@ def add_nums(request):
 
 @csrf_exempt
 def chemda(request):
-    dump = form_trial('POST', request.POST)
-    return render(request, 'chemda.html', {'data': dump})
+    val1 = int(request.POST['Month'])
+    val2 = int(request.POST['Day'])
+    res = val1 + val2
+    return render(request, 'chemda.html', {'data': res})
 
 
 def db(request):
