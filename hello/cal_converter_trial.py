@@ -1,5 +1,4 @@
 import math
-import matplotlib.pyplot as plt
 
 January = 1
 February = 2
