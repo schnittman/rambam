@@ -5,6 +5,7 @@ import html
 from django.views.decorators.csrf import csrf_exempt
 from .cal_converter_trial import *
 from .models import Greeting
+import matplotlib
 
 # Create your views here.
 
