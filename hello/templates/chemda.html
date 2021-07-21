@@ -9,12 +9,13 @@
 </div>
 <p>Pre HTML 5 input types...</p>
 <form method="post">
+  {% csrf_token %}
    <p><label for="inp01">Month:</label>
-   <input type="int" name="Month" id="inp01" size="40" ></p>
+   <input type="text" name="Month" id="inp01" size="40" ></p>
    <p><label for="inp02">Day:</label>
-   <input type="int" name="Day" id="inp02" size="40" ></p>
+   <input type="test" name="Day" id="inp02" size="40" ></p>
    <p><label for="inp03">Year:</label>
-   <input type="int" name="Year" id="inp03" size="40" ></p>
+   <input type="text" name="Year" id="inp03" size="40" ></p>
    
 <p>
    <input type="submit" name="dopost" value="Submit"/>
