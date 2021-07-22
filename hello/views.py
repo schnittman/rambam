@@ -65,9 +65,9 @@ def add_nums(request):
 def chemda(request):
     val1 = int(request.POST.get('Month', False))
     val2 = int(request.POST.get('Day', False))
-    #val3 = int(request.POST.get('Year', False))
-    #res = eng_to_num(val1, val2, val3)
-    res = val1 + val2
+    val3 = int(request.POST.get('Year', False))
+    res = eng_to_num(val1, val2, val3)
+    #res = val1 + val2
     return render(request, 'chemda.html', {'data': res})
 
 
