@@ -69,7 +69,7 @@ def chemda(request):
     res_2 = num_to_heb(res)
     #res = val1 + val2
     return render(request, 'chemda.html', {'data': res_2})
-    return render(request, 'result.html', {'data': res_2})
+    #return render(request, 'result.html', {'data': res_2})
 
 
 
