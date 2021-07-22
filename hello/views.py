@@ -67,8 +67,9 @@ def chemda(request):
     val2 = int(request.POST.get('Day', False))
     val3 = int(request.POST.get('Year', False))
     res = eng_to_num(val1, val2, val3)
+    res_2 = num_to_heb(res)
     #res = val1 + val2
-    return render(request, 'chemda.html', {'data': res})
+    return render(request, 'chemda.html', {'data': res_2})
 
 
 def db(request):
